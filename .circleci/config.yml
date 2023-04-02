@@ -67,4 +67,4 @@ jobs:
     steps:
       - run:
           name: deploy-application
-          command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "export SERVER=\"$SERVER\"; export IMAGE_NAME=\"$IMAGE_NAME\"; export PRIVATE_KEY=\"$PRIVATE_KEY\"; rm -rf ExampleApplicationDO3/;git clone https://github.com/NathanWalshNCI/ExampleApplicationDO3.git; source ExampleApplicationDO3/deploy.sh"   
+          command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "export SERVER=\"$SERVER\"; export IMAGE_NAME=\"$IMAGE_NAME\"; export PRIVATE_KEY=\"$PRIVATE_KEY\"; export CONTAINER_NAME=\"$CONTAINER_NAME\"; rm -rf ExampleApplicationDO3/;git clone https://github.com/NathanWalshNCI/ExampleApplicationDO3.git; source ExampleApplicationDO3/deploy.sh"   

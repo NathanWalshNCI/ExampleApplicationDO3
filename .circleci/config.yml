@@ -57,8 +57,7 @@ jobs:
           command: docker create -p 8443:8443 --name integration_app $IMAGE_NAME
       - run:
           name: copy-server-cert-and-private-key-across
-          command: docker cp ./privatekey.pem integration_app:/privatekey.pem; docker cp ./
-          server.crt integration_app:/server.crt;
+          command: docker cp ./privatekey.pem integration_app:/privatekey.pem; docker cp ./server.crt integration_app:/server.crt
       - run:
           name: start-docker-container
           command: docker start integration_app

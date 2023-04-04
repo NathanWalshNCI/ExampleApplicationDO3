@@ -33,9 +33,9 @@ jobs:
       - run:
           name: install-npm
           command: npm install
-      #- run:
-      #    name: audit-packages
-      #    command: npm audit
+      - run:
+          name: audit-packages
+          command: npm audit
       - run:
           name: test-run
           command: npm run test
